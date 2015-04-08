@@ -1,12 +1,15 @@
+<body>
 <h1>Raffling</h1>
-<form id="user_form">
+<form id="form_user">
 	<input type="text" name="user[name]"/>
 	<button type="submit">Add</button>
-</form>
+
 <ul id="users_list">
 	<% @users.each do |user| %>
-	<li data-userid="<%= user.id %>" class="<%='winner' if user.winner%>"><%= user.name %></li>
+	<li data-userid="<%= user.id %>" class="<%='winner' if user.winner%>"><%= user.name %>
+	</li>
 	<% end %>
 </ul>
-
-<button id="drawWinner">Draw Winner</button>
+</form>
+<button id="draw">Draw Winner</button>
+</body>
